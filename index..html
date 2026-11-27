@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">✦</span>
+            PromptCraft
+        </div>
+        <span class="topbar-note">Your AI Study Companion</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="eyebrow">✧ YOUR AI STUDY COMPANION</div>
+            <h1>Turn your ideas into<br>
+                <span>powerful AI prompts.</span>
+            </h1>
+            <p>
+                Create clear and effective prompts for assignments,
+                projects, research and everyday learning.
+            </p>
+        </section>
+
+        <section class="workspace">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Build Your Prompt</h2>
+                    <p>Fill in the details below to get started.</p>
+                </div>
+                <span class="step-label">5 SIMPLE STEPS</span>
+            </div>
+
+            <form id="promptForm">
+
+                <div class="field">
+                    <label for="role">
+                        01. ROLE
+                        <span>Who should the AI act as?</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="role"
+                        placeholder="e.g. An experienced computer science teacher">
+                </div>
+
+                <div class="field">
+                    <label for="task">
+                        02. TASK
+                        <span>What do you want the AI to do?</span>
+                    </label>
+                    <textarea
+                        id="task"
+                        rows="3"
+                        placeholder="e.g. Explain machine learning concepts">
+                    </textarea>
+                </div>
+
+                <div class="field">
+                    <label for="context">
+                        03. CONTEXT
+                        <span>Provide background information</span>
+                    </label>
+                    <textarea
+                        id="context"
+                        rows="3"
+                        placeholder="e.g. I am a second-year college student">
+                    </textarea>
+                </div>
+
+                <div class="field">
+                    <label for="constraints">
+                        04. CONSTRAINTS
+                        <span>Set rules or limitations</span>
+                    </label>
+                    <textarea
+                        id="constraints"
+                        rows="3"
+                        placeholder="e.g. Use simple language and give examples">
+                    </textarea>
+                </div>
+
+                <div class="field">
+                    <label for="format">
+                        05. OUTPUT FORMAT
+                        <span>How should the answer look?</span>
+                    </label>
+
+                    <select id="format">
+                        <option value="">Choose output format</option>
+                        <option value="Explanation with headings and bullet points">
+                            Explanation with headings and bullet points
+                        </option>
+                        <option value="Step-by-step guide">
+                            Step-by-step guide
+                        </option>
+                        <option value="Table">
+                            Table
+                        </option>
+                        <option value="Short summary">
+                            Short summary
+                        </option>
+                        <option value="Essay">
+                            Essay
+                        </option>
+                        <option value="Numbered list">
+                            Numbered list
+                        </option>
+                        <option value="Code with explanation">
+                            Code with explanation
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        ✦ Generate Prompt
+                    </button>
+
+                    <button type="button" id="clearBtn"
+                        class="btn btn-ghost">
+                        Clear All
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="output-section">
+
+            <div class="output-heading">
+                <div>
+                    <div class="output-kicker">YOUR RESULT</div>
+                    <h2>Generated Prompt</h2>
+                </div>
+                <span class="ready-badge">● READY TO USE</span>
+            </div>
+
+            <div class="output-box">
+
+                <div id="outputPlaceholder" class="placeholder">
+                    <span class="placeholder-icon">✧</span>
+                    <p>Your prompt will appear here.</p>
+                    <small>
+                        Complete the fields and click Generate Prompt.
+                    </small>
+                </div>
+
+                <pre id="outputText" class="output-text" hidden></pre>
+
+            </div>
+
+            <div class="output-actions">
+                <span id="statusMessage">
+                    Your generated prompt stays in this browser.
+                </span>
+
+                <button type="button" id="copyBtn"
+                    class="btn btn-copy" disabled>
+                    ▢ Copy Prompt
+                </button>
+            </div>
+
+        </section>
+
+        <section class="sample-section">
+
+            <div class="sample-icon">✎</div>
+
+            <div class="sample-content">
+                <div class="sample-label">
+                    NEED A LITTLE INSPIRATION?
+                </div>
+
+                <h3>Try a Sample Prompt</h3>
+
+                <p>
+                    See how the five elements come together to create
+                    a useful prompt for studying.
+                </p>
+
+                <button type="button" class="sample-link" id="sampleBtn">
+                    Load Sample Prompt →
+                </button>
+            </div>
+
+        </section>
+
+        <footer>
+            Made for curious minds ✦ Learn better. Prompt smarter.
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
